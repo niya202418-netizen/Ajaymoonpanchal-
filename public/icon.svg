@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <linearGradient id="meterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="512" height="512" rx="108" fill="url(#bgGlow)"/>
+
+  <!-- Tactical Radar Rings -->
+  <circle cx="256" cy="256" r="190" stroke="#334155" stroke-width="3" fill="none" stroke-dasharray="8 8"/>
+  <circle cx="256" cy="256" r="140" stroke="#475569" stroke-width="4" fill="none"/>
+  <circle cx="256" cy="256" r="80" stroke="#f59e0b" stroke-width="4" fill="none" stroke-opacity="0.6"/>
+
+  <!-- Radar Crosshairs -->
+  <line x1="256" y1="56" x2="256" y2="456" stroke="#334155" stroke-width="2"/>
+  <line x1="56" y1="256" x2="456" y2="256" stroke="#334155" stroke-width="2"/>
+
+  <!-- Ghost Hunter Threat Icon / Stylized Ghost Specter -->
+  <g filter="url(#glow)">
+    <path d="M 256 120 C 190 120 160 170 160 230 C 160 280 170 340 160 380 C 175 370 195 385 215 375 C 235 365 255 385 275 375 C 295 365 315 385 335 375 C 345 380 352 375 352 380 C 342 340 352 280 352 230 C 352 170 322 120 256 120 Z" fill="#0f172a" stroke="url(#meterGrad)" stroke-width="12"/>
+
+    <!-- Eyes (P.K.E. sensor luminescence) -->
+    <ellipse cx="220" cy="220" rx="16" ry="24" fill="#f59e0b"/>
+    <ellipse cx="292" cy="220" rx="16" ry="24" fill="#ef4444"/>
+
+    <!-- EMF Sensor Antenna Beam -->
+    <path d="M 256 120 L 256 68" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="256" cy="64" r="12" fill="#ef4444"/>
+  </g>
+
+  <!-- Threat Wave Indicator Arc -->
+  <path d="M 120 390 A 180 180 0 0 1 392 390" fill="none" stroke="url(#meterGrad)" stroke-width="16" stroke-linecap="round"/>
+</svg>

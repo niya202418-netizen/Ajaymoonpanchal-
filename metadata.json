@@ -1,0 +1,8 @@
+{
+  "name": "Ghost Hunting Activity Tracker",
+  "description": "Interactive paranormal investigation tracker featuring multi-floor tactical maps, real-time threat meter, EMF and thermal sensor logs, mobile APK/PWA support, and ghost manifestation diagnostics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
